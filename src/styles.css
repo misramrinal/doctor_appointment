@@ -1,0 +1,90 @@
+.ToDo-Container{
+    width : 500px;
+    padding: 10px 20px;
+    font-family: "Segoe UI";
+    background-color: white;
+    border-radius: 10px;
+}
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-button{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+body{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.neon-button {
+    background-color: transparent;
+    border: 2px solid #00f; /* Neon blue color */
+    color: #00f; /* Neon blue color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s, box-shadow 0.4s;
+  }
+  
+  .neon-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #00f; /* Neon blue color */
+    transition: width 0.4s, height 0.4s, opacity 0.4s, transform 0.4s;
+    z-index: -1;
+  }
+  
+  .neon-button:hover::before {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  .neon-button:hover {
+    color: #fff; /* Change text color on hover */
+    box-shadow: 0 0 20px #00f; /* Add glow effect on hover */
+  }
+  span {
+    margin-right: 110px; /* Add space to the right of each span */
+  }
+  .icon {
+    /* p: 40px; */
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 70px; /* Set width */
+    height: 70px; /* Set height */
+    border-radius: 15%; /* Make the border a circle (for rounded corners) */
+  }
+  .one {
+    margin-right: 35px
+  }
+  .two {
+    margin-right: 45px
+  }
+  .small-green-button {
+    padding: 12px 12px; /* Adjust padding to set button size */
+    background-color: green; /* Set the background color to green */
+    color: white; /* Set text color to white */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Add rounded corners */
+    font-size: 14px; /* Set font size */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  .horizontal-line{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  
