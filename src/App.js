@@ -4,6 +4,7 @@ import Header from './components/header'
 import Item from './components/item'
 import Button from './components/button';
 import './styles.css'
+import Table from './components/table';
 import Counter from './components/counter';
 import { getPosts } from './api';
 import { useEffect, useState } from 'react';
@@ -11,10 +12,15 @@ import ClinicImage from './components/pics/clinic.jpg';
 import CallIcon from './components/pics/call.jpg';
 import VideoCall from './components/pics/video.jpg';
 function App() {
+  
   const [data, setdata] = useState(null)
   useEffect(() => {
     getPosts().then(posts => setdata(posts))
   },[])
+    const [showTable, setShowTable] = useState(false);
+    const handleButtonClick = () => {
+      setShowTable(false); // Set showTable state to true when the button is clicked
+    };
   return (
     <div className='ToDo-Container'>
     Dr. Manik Dalvi
@@ -37,9 +43,9 @@ function App() {
       <span>Manik Dalvi's Clinic, Kalyan Naka, Rk Business Centre,
       Opp. Bopal Nagar, Maharastra, 321302</span>
       <hr class="horizontal-line" ></hr>
-
     </p>
-    
+
+   <Table/> 
     </div>
   );
 }
